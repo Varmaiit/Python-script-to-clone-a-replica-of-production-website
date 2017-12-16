@@ -1,0 +1,9 @@
+{
+    "tldName": "cvarma.com",            // tld Name of the website you wish to create.
+    "userName": "ubuntu",               // userName on the server
+    "hostName": "localhost",            // By default host would be localhost, in case you wish to change you can change it here
+    "mysqlUserName": "root",            // MySQL User Name
+    "mysqlPassword": "password",         // MySQL Password
+    "WebAppGitRemotePath": "https://github.com/example/example.git",   //Project Git repository url
+    "sqlDumpFilePath": "/home/ubuntu/livebackup.sql"
+}
