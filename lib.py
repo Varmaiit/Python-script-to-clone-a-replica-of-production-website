@@ -9,7 +9,7 @@ with open('config.json') as data_file:
 
 
 @task
-def create_test_db_from_backupfile(dbName, tldName = "cvarma.com", sqlDumpFilePath = CONFIG['sqlDumpFilePath'],  hostName = CONFIG['hostName'] , mysqlUserName = CONFIG['mysqlUserName'], mysqlPassword = CONFIG['mysqlPassword'] ):
+def create_test_db_from_backupfile(dbName, tldName = CONFIG['tldName'], sqlDumpFilePath = CONFIG['sqlDumpFilePath'],  hostName = CONFIG['hostName'] , mysqlUserName = CONFIG['mysqlUserName'], mysqlPassword = CONFIG['mysqlPassword'] ):
     
     '''This command will create dev db from backup sql file.
     
@@ -58,7 +58,7 @@ def create_test_db_from_backupfile(dbName, tldName = "cvarma.com", sqlDumpFilePa
 
 @task
 def clone_new_dev_instance(devName, tldName = CONFIG['tldName'], userName = CONFIG['userName'], hostName = CONFIG['hostName'] , mysqlUserName = CONFIG['mysqlUserName'], 
-                                mysqlPassword = CONFIG['mysqlPassword'],  WebAppGitRemotePath =  "https://github.com/example/example.git"):
+                                mysqlPassword = CONFIG['mysqlPassword'],  WebAppGitRemotePath = CONFIG['WebAppGitRemotePath']):
     '''This command will clone a new dev into /var/www/
 
     It takes 7 arguments, 1 argument is mandatory and the rest has been taken from default parameter in config.json file:
