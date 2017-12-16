@@ -9,7 +9,7 @@ with open('config.json') as data_file:
 
 
 @task
-def create_test_db_from_backupfile(dbName, tldName = "cvarma.com", sqlDumpFilePath = CONFIG['sqlDumpFilePath'],  hostName = CONFIG['localhost'] , mysqlUserName = CONFIG['mysqlUserName'], mysqlPassword = CONFIG['mysqlPassword'] ):
+def create_test_db_from_backupfile(dbName, tldName = "cvarma.com", sqlDumpFilePath = CONFIG['sqlDumpFilePath'],  hostName = CONFIG['hostName'] , mysqlUserName = CONFIG['mysqlUserName'], mysqlPassword = CONFIG['mysqlPassword'] ):
     
     '''This command will create dev db from backup sql file.
     
@@ -57,7 +57,7 @@ def create_test_db_from_backupfile(dbName, tldName = "cvarma.com", sqlDumpFilePa
 
 
 @task
-def clone_new_dev_instance(devName, tldName = CONFIG['tldName'], userName = CONFIG['userName'], hostName = CONFIG['localhost'] , mysqlUserName = CONFIG['mysqlUserName'], 
+def clone_new_dev_instance(devName, tldName = CONFIG['tldName'], userName = CONFIG['userName'], hostName = CONFIG['hostName'] , mysqlUserName = CONFIG['mysqlUserName'], 
                                 mysqlPassword = CONFIG['mysqlPassword'],  WebAppGitRemotePath =  "https://github.com/example/example.git"):
     '''This command will clone a new dev into /var/www/
 
@@ -144,7 +144,7 @@ def clone_new_dev_instance(devName, tldName = CONFIG['tldName'], userName = CONF
 
 
 @task
-def teardown_dev(devName, tldName = CONFIG['tldName'], hostName = CONFIG['localhost'] , mysqlUserName = CONFIG['mysqlUserName'], mysqlPassword = CONFIG['mysqlPassword']):
+def teardown_dev(devName, tldName = CONFIG['tldName'], hostName = CONFIG['hostName'] , mysqlUserName = CONFIG['mysqlUserName'], mysqlPassword = CONFIG['mysqlPassword']):
     
     '''This command will delete complete testing website, helpful incase you have too many testing websites
 

@@ -1,11 +1,11 @@
-## Python script to clone a replica of production website  using shovel 
+## Python script to clone a replica of production website and host it as a sub domain.
 Make a replica and host a production website for testing using shovel (which turns python functions into tasks)
 
 
 ## Prerequisites for this python script to work
 1. Unix based web server which also includes nginx
 1. Python 2.7 Installed
-1. Install shovel library
+1. Install shovel [Instructions to install Shovel](https://github.com/seomoz/shovel#installing-shovel)
 1. Add the DNS for your testing website on you
 
 
